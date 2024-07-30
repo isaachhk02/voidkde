@@ -134,7 +134,7 @@ Start() {
 else
   echo "No Void Linux detected!"
 fi
-
+}
 if [[ "$EUID" -eq 0 ]]; then
   Start
 else
