@@ -1,7 +1,6 @@
 #!/bin/bash
 # Idea by callmezatiel
 # version by hhk02 and callmezatiel
-
 # Functions
 EnableServices() {
   ##Services
