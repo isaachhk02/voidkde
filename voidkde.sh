@@ -40,7 +40,7 @@ EnableServices() {
 # Main function
 Start() {
   # Check if are in Void Linux
-  if [ "cat /etc/os-release | grep Void" ]; then
+  if [ cat /etc/os-release | grep 'Void' ]; then
     echo "Void Linux detected!"
   # Check if package manager it's installed or exists!
   if [ -f "/usr/bin/xbps-install" ]; then
