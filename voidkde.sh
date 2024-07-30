@@ -135,7 +135,7 @@ else
   echo "No Void Linux detected!"
 fi
 
-if [ "$EUID" == 0 ]; then
+if [[ "$EUID" -eq 0 ]]; then
   Start
 else
   echo "ERROR: Please run as root!"
