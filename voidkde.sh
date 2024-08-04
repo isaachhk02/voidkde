@@ -61,16 +61,16 @@ Start() {
   
     # Install drivers
     echo "Installing necessary drivers for your hardware"
-    if [ "lspci -knn | grep -e Radeon" || "lspci -knn | grep -e ATI" ]; then
+    if [ lspci -knn | grep -e Radeon || lspci -knn | grep -e ATI ]; then
       sudo xbps-install linux-firmware-amd mesa-vulkan-radeon vulkan-loader xf86-video-amdgpu xf86-video-ati ffmpeg ffmpegthumbs pulseaudio alsa-utils pipewire -y
       echo "Done!"
     fi
-    if [ "lspci -knn | grep -e NVIDIA" ]; then
+    if [ lspci -knn | grep -e NVIDIA ]; then
       echo "NVIDIA Detected!"
       sudo xbps-install nvidia vulkan-loader ffmpeg ffmpegthumbs pulseaudio alsa-utils pipewire -y
       echo "Done!"
     fi
-    if [ "lspci -knn | grep -e Intel" ]; then
+    if [ lspci -knn | grep -e Intel ]; then
       echo "Intel Detected!"
       sudo xbps-install linux-firmware-intel mesa-vulkan-intel intel-video-accel  vulkan-loader ffmpeg ffmpegthumbs pulseaudio alsa-utils pipewire -y
       echo "Done!"
